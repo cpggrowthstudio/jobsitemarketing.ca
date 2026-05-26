@@ -608,14 +608,15 @@ footer{
 .comp-table-wrap{
   background:var(--white);border:1.5px solid var(--border-light);
   border-radius:12px;overflow:hidden;margin-top:4px;
+  max-width:820px;
 }
 .ct-header{
-  display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;
+  display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;
   background:var(--text-light);
 }
-.ct-feature-col{padding:20px 16px;font-size:13px}
+.ct-feature-col{padding:12px 14px;font-size:13px}
 .ct-tier-col{
-  padding:20px 14px;text-align:center;
+  padding:14px 10px;text-align:center;
   border-left:1px solid rgba(255,255,255,.08);
 }
 .ct-header .ct-feature-col{background:transparent}
@@ -655,11 +656,11 @@ footer{
 /* make group labels span full width */
 .ct-group-label{display:grid;grid-column:span 4}
 .ct-row{
-  display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;
+  display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;
   border-top:1px solid var(--border-light);
 }
 .ct-row .ct-feature-col{
-  padding:11px 16px;font-size:13px;
+  padding:10px 14px;font-size:12px;
   color:var(--text-light);display:flex;align-items:center;
 }
 .ct-row .ct-tier-col{
@@ -670,7 +671,7 @@ footer{
 .ct-yes{color:var(--red);font-size:16px;font-weight:700}
 .ct-no{color:var(--border-light);font-size:18px}
 .ct-cta-row{
-  display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;
+  display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;
   border-top:2px solid var(--border-light);
   background:var(--off-white);
 }
@@ -688,7 +689,7 @@ footer{
 .ct-btn-outline{background:transparent;color:var(--text-light);border:1.5px solid var(--border-light)}.ct-btn-outline:hover{border-color:var(--text-light)}
 .ct-cta-note{font-size:10px;color:var(--muted-light);font-family:'DM Mono',monospace;text-align:center;letter-spacing:.04em}
 .ct-flow-row{
-  display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;
+  display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;
   border-top:1px solid var(--border-light);
   background:var(--white);
 }
@@ -705,8 +706,20 @@ footer{
 .ct-flow-arr{font-size:10px;color:var(--muted-light);flex-shrink:0}
 
 @media(max-width:700px){
-  .ct-header,.ct-row,.ct-cta-row,.ct-flow-row{grid-template-columns:1fr 1fr 1fr}
-  .ct-header .ct-feature-col,.ct-row .ct-feature-col,.ct-cta-row .ct-feature-col,.ct-flow-row .ct-feature-col{display:none}
+  /* Stack pricing table on mobile — feature label above checks */
+  .comp-table-wrap{overflow-x:auto;max-width:100%}
+  .ct-header{grid-template-columns:1.4fr 1fr 1fr 1fr;min-width:380px}
+  .ct-row{grid-template-columns:1.4fr 1fr 1fr 1fr;min-width:380px}
+  .ct-cta-row{grid-template-columns:1.4fr 1fr 1fr 1fr;min-width:380px}
+  .ct-flow-row{grid-template-columns:1.4fr 1fr 1fr 1fr;min-width:380px}
+  .ct-group-label{min-width:380px}
+  .ct-header .ct-feature-col{display:block}
+  .ct-row .ct-feature-col{display:flex;font-size:11px;padding:8px 10px}
+  .ct-tier-col{padding:10px 6px}
+  .ct-tier-name{font-size:14px}
+  .ct-tier-price{font-size:20px}
+  .ct-mo-price{font-size:16px}
+  .ct-tier-tag{font-size:9px;padding:3px 5px}
   .ai-stats-full{grid-template-columns:1fr 1fr}
 }
 
@@ -830,12 +843,344 @@ footer{
 }
 
 </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://jobsitemarketing.ca/#business",
+      "name": "Jobsite Marketing",
+      "alternateName": ["Jobsite Marketing Burlington", "Jobsite Marketing Ontario"],
+      "url": "https://jobsitemarketing.ca",
+      "logo": "https://jobsitemarketing.ca/logo.svg",
+      "image": "https://jobsitemarketing.ca/hero-bg.png",
+      "description": "Jobsite Marketing builds AI-optimized websites for trades and construction businesses in Burlington, Ontario. We help roofers, plumbers, electricians, general contractors, painters, landscapers, and handymen get recommended by ChatGPT, Google AI Overviews, and show up in Google Maps. Burlington local. Don't pay until your first lead converts.",
+      "telephone": "+16475045210",
+      "email": "hello@jobsitemarketing.ca",
+      "foundingDate": "2026",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Burlington",
+        "addressLocality": "Burlington",
+        "addressRegion": "Ontario",
+        "postalCode": "L7R",
+        "addressCountry": "CA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 43.3255,
+        "longitude": -79.7990
+      },
+      "hasMap": "https://maps.google.com/?q=Burlington,Ontario,Canada",
+      "areaServed": [
+        {
+          "@type": "GeoCircle",
+          "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "latitude": 43.3255,
+            "longitude": -79.7990
+          },
+          "geoRadius": "40000"
+        },
+        {"@type": "City", "name": "Burlington", "containedInPlace": {"@type": "State", "name": "Ontario"}},
+        {"@type": "City", "name": "Oakville"},
+        {"@type": "City", "name": "Hamilton"},
+        {"@type": "City", "name": "Waterdown"},
+        {"@type": "City", "name": "Milton"},
+        {"@type": "Neighbourhood", "name": "Aldershot, Burlington"},
+        {"@type": "Neighbourhood", "name": "Millcroft, Burlington"},
+        {"@type": "Neighbourhood", "name": "Headon Forest, Burlington"},
+        {"@type": "Neighbourhood", "name": "Appleby, Burlington"},
+        {"@type": "Neighbourhood", "name": "Brant Hills, Burlington"},
+        {"@type": "Neighbourhood", "name": "Tansley, Burlington"}
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+16475045210",
+          "contactType": "customer service",
+          "areaServed": "CA",
+          "availableLanguage": "English",
+          "contactOption": "TollFree",
+          "hoursAvailable": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+            "opens": "07:00",
+            "closes": "20:00"
+          }
+        },
+        {
+          "@type": "ContactPoint",
+          "email": "hello@jobsitemarketing.ca",
+          "contactType": "sales",
+          "areaServed": "CA",
+          "availableLanguage": "English"
+        }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "07:00",
+          "closes": "20:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Saturday"],
+          "opens": "09:00",
+          "closes": "17:00"
+        }
+      ],
+      "serviceType": [
+        "AI Search Optimisation",
+        "ChatGPT Local Business Optimisation",
+        "Google AI Overview Optimisation",
+        "Trades Website Design",
+        "Google Maps SEO",
+        "Google Business Profile Optimisation",
+        "Social Media Management for Contractors",
+        "Logo Design for Trades",
+        "Roofing Contractor Website",
+        "Plumber Website Burlington",
+        "Electrician Website Burlington",
+        "General Contractor Website Burlington",
+        "Landscaping Website Burlington",
+        "Painter Website Burlington",
+        "Handyman Website Burlington"
+      ],
+      "knowsAbout": [
+        "AI search optimisation for local businesses",
+        "ChatGPT local business recommendations",
+        "Google AI Overviews for contractors",
+        "Google Maps local SEO",
+        "Trades and construction digital marketing",
+        "Burlington Ontario contractor websites",
+        "Missed call text-back automation",
+        "Google Analytics conversion tracking",
+        "Local schema markup",
+        "Voice search optimisation for trades"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Jobsite Marketing Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Launch — Get Online",
+              "description": "5 page custom mobile website with AI schema markup, Google Business Profile setup, on-page SEO, Burlington neighbourhood targeting, and monthly rank report. Flat $999 setup."
+            },
+            "price": "999",
+            "priceCurrency": "CAD",
+            "priceSpecification": {
+              "@type": "RecurringCharges",
+              "price": "149",
+              "priceCurrency": "CAD",
+              "billingPeriod": "P1M"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Basic — Get Found",
+              "description": "AI search optimisation, Google Analytics 4 conversion tracking, missed call text-back, quote form with instant notification, Google Search Console, and monthly SEO. Don't pay balance until first lead converts."
+            },
+            "price": "1800",
+            "priceCurrency": "CAD",
+            "priceSpecification": {
+              "@type": "RecurringCharges",
+              "price": "297",
+              "priceCurrency": "CAD",
+              "billingPeriod": "P1M"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Full Service — Dominate Locally",
+              "description": "Complete digital marketing for trades including social media, monthly ChatGPT and Google AI audit, call tracking, automated review requests after every job, competitor monitoring, and quarterly strategy call."
+            },
+            "price": "2500",
+            "priceCurrency": "CAD",
+            "priceSpecification": {
+              "@type": "RecurringCharges",
+              "price": "547",
+              "priceCurrency": "CAD",
+              "billingPeriod": "P1M"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Logo Design for Trades",
+              "description": "Professional logo design for trades and construction businesses. 3 concepts, 2 revision rounds, all file formats."
+            },
+            "price": "399",
+            "priceCurrency": "CAD"
+          }
+        ]
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "1",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "priceRange": "$$",
+      "currenciesAccepted": "CAD",
+      "paymentAccepted": "Credit Card, Debit, E-Transfer",
+      "sameAs": [
+        "https://www.facebook.com/jobsitemarketing",
+        "https://www.linkedin.com/company/jobsite-marketing",
+        "https://www.instagram.com/jobsitemarketing"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://jobsitemarketing.ca/#founder",
+      "name": "Ahmed",
+      "jobTitle": "Founder and Digital Marketing Strategist",
+      "worksFor": {"@id": "https://jobsitemarketing.ca/#business"},
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Burlington",
+        "addressRegion": "Ontario",
+        "addressCountry": "CA"
+      },
+      "description": "Founder of Jobsite Marketing. Brand marketing professional with experience on Colgate, Nestlé Purina, Goldfish Crackers, and Gui Gui Slime. Burlington homeowner and hands-on renovator who specialises in AI search optimisation and digital marketing for trades and construction businesses.",
+      "knowsAbout": [
+        "Brand management",
+        "AI search optimisation",
+        "Local SEO for trades",
+        "Google Maps optimisation",
+        "ChatGPT business visibility",
+        "Trades and construction marketing",
+        "Digital marketing for contractors"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://jobsitemarketing.ca/#website",
+      "url": "https://jobsitemarketing.ca",
+      "name": "Jobsite Marketing",
+      "description": "AI-powered websites and digital marketing for trades and construction businesses in Burlington, Ontario, Canada",
+      "publisher": {"@id": "https://jobsitemarketing.ca/#business"},
+      "inLanguage": "en-CA",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://jobsitemarketing.ca/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://jobsitemarketing.ca"},
+        {"@type": "ListItem", "position": 2, "name": "Pricing", "item": "https://jobsitemarketing.ca/#pricing"},
+        {"@type": "ListItem", "position": 3, "name": "Trades", "item": "https://jobsitemarketing.ca/#trades"},
+        {"@type": "ListItem", "position": 4, "name": "About", "item": "https://jobsitemarketing.ca/#about"},
+        {"@type": "ListItem", "position": 5, "name": "Contact", "item": "https://jobsitemarketing.ca/#contact"}
+      ]
+    },
+    {
+      "@type": "Speakable",
+      "cssSelector": [".hero-bullets", ".ai-stats-full", ".ct-header", ".about-p"]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Jobsite Marketing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Jobsite Marketing is a Burlington, Ontario digital marketing company that builds AI-optimized websites for trades and construction businesses. We help roofers, plumbers, electricians, and general contractors get recommended by ChatGPT, show up on Google Maps, and get found on Google Search."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Jobsite Marketing build websites for roofers in Burlington Ontario?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Jobsite Marketing specialises in roofing contractor websites in Burlington, Ontario. We build sites that rank on Google, show up in Google Maps, and get recommended by AI tools like ChatGPT when homeowners search for a roofer in Burlington."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Jobsite Marketing help plumbers and electricians get found on Google in Burlington?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We build websites for plumbers, electricians, general contractors, painters, landscapers, HVAC, drywall contractors, and other trades businesses in Burlington, Oakville, Hamilton, and surrounding Ontario cities."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does AI search optimisation work for contractors?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "When a homeowner asks ChatGPT or Google AI to recommend a contractor in Burlington, AI reads websites and structured data to decide who to suggest. Jobsite Marketing builds your site with the exact schema markup, content, and signals that AI tools look for when making local recommendations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the cost of a trades website in Burlington Ontario?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Jobsite Marketing offers three plans. Launch starts at $999 flat with $149 per month. Basic is $1,800 total setup with $297 per month. Full Service is $2,500 setup with $547 per month. On the Basic and Full Service plans you only pay the balance after your first lead converts — not upfront."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long until a trades website shows up on ChatGPT or Google AI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most Jobsite Marketing clients see Google Maps improvement within 2 to 4 weeks, Google Search rankings climbing within 60 to 90 days, and ChatGPT and Google AI visibility beginning between 60 and 90 days after launch. Progress is reported monthly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Jobsite Marketing guarantee results?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. On the Basic and Full Service plans you pay a $499 deposit and only pay the remaining balance after your first real lead converts through the site. Google Analytics 4 tracks every conversion in real time so both parties see exactly when it happens."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Jobsite Marketing local to Burlington Ontario?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Jobsite Marketing is founded and operated in Burlington, Ontario by Ahmed, a brand marketing professional with experience at Colgate, Nestlé Purina, and Goldfish Crackers who also renovates his own home. We are not an agency from out of province or the United States."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
 <!-- NAV -->
 <nav>
-  <a href="#" onclick="showPage('home')" class="nav-logo"><span>JOBSITE</span> MARKETING</a>
+  <a href="#" onclick="showPage('home')" class="nav-logo" style="display:flex;align-items:center;line-height:1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 40" fill="none" style="height:38px;width:auto;display:block">
+  <!-- Map pin -->
+  <path d="M16 2C10.48 2 6 6.48 6 12c0 8 10 20 10 20s10-12 10-20c0-5.52-4.48-10-10-10z" fill="#D72638"/>
+  <circle cx="16" cy="12" r="3.5" fill="white"/>
+  <!-- Signal arcs -->
+  <path d="M9 7.5 Q16 1.5 23 7.5" stroke="#D72638" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <path d="M6.5 5 Q16 -1.5 25.5 5" stroke="#D72638" stroke-width="1.4" stroke-linecap="round" fill="none" opacity=".4"/>
+  <!-- JOBSITE MARKETING single line -->
+  <text x="36" y="27" font-family="'Bebas Neue',Impact,sans-serif" font-size="26" letter-spacing="2" fill="#D72638">JOBSITE</text>
+  <text x="130" y="27" font-family="'Bebas Neue',Impact,sans-serif" font-size="26" letter-spacing="2" fill="#D72638" opacity=".75">MARKETING</text>
+</svg></a>
   <ul class="nav-links">
     <li><a href="#" onclick="showPage('home')">Home</a></li>
     <li><a href="#" onclick="showPage('about')">About</a></li>
@@ -1322,7 +1667,17 @@ footer{
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo"><span>JOBSITE</span> MARKETING</div>
+  <div class="footer-logo" style="display:flex;align-items:center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 40" fill="none" style="height:28px;width:auto;display:block">
+  <!-- Map pin -->
+  <path d="M16 2C10.48 2 6 6.48 6 12c0 8 10 20 10 20s10-12 10-20c0-5.52-4.48-10-10-10z" fill="#D72638"/>
+  <circle cx="16" cy="12" r="3.5" fill="white"/>
+  <!-- Signal arcs -->
+  <path d="M9 7.5 Q16 1.5 23 7.5" stroke="#D72638" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <path d="M6.5 5 Q16 -1.5 25.5 5" stroke="#D72638" stroke-width="1.4" stroke-linecap="round" fill="none" opacity=".4"/>
+  <!-- JOBSITE MARKETING single line -->
+  <text x="36" y="27" font-family="'Bebas Neue',Impact,sans-serif" font-size="26" letter-spacing="2" fill="#D72638">JOBSITE</text>
+  <text x="130" y="27" font-family="'Bebas Neue',Impact,sans-serif" font-size="26" letter-spacing="2" fill="#D72638" opacity=".6">MARKETING</text>
+</svg></div>
   <div class="footer-links">
     <a href="#services" onclick="showPage('home')">Services</a>
     <a href="#pricing" onclick="showPage('home')">Pricing</a>
