@@ -1,0 +1,11 @@
+# Private tools. Never publish these, they hold the prospect list and notes.
+call-sheet.html
+call-sheet*.html
+trade-site-builder.html
+trade-site-builder*.html
+outreach-desk*.html
+jobsite-outreach-board*.html
+claude-code-brief.md
+
+# Mac junk
+.DS_Store
