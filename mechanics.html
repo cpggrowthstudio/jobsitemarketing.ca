@@ -410,7 +410,7 @@
   <div class="wrap">
     <div>
       <h2>What it costs you, in your own numbers.</h2>
-      <p class="sub">A missed call is invisible. You never see the job you did not get, so it never feels like it cost you anything. Put your own numbers in and it stops being invisible.</p>
+      <p class="sub">A missed call is invisible. You never see the car that did not come in, so it never feels like it cost you anything. Put your own numbers in and it stops being invisible.</p>
     </div>
     <div class="order">
       <div class="order-h"><span>Missed call tally</span><em>your numbers</em></div>
@@ -420,13 +420,14 @@
           <input type="range" id="rM" min="1" max="25" value="5">
         </div>
         <div class="ctl">
-          <label for="rJ"><span>What a typical job is worth</span><output id="oJ">$2,500</output></label>
-          <input type="range" id="rJ" min="200" max="15000" step="100" value="2500">
+          <label for="rJ"><span>What an average repair order is worth</span><output id="oJ">$2,500</output></label>
+          <input type="range" id="rJ" min="60" max="4000" step="20" value="450">
         </div>
         <div class="tally">
           <div class="big" id="oBig">$54,000<small>a month</small></div>
           <div class="cap">in work that rang, went to voicemail, and went to someone else.</div>
-          <div class="qtr">Even if only <b>one in four</b> of those would have booked, that is <b id="oQ">$13,500</b> a month walking to a competitor.</div>
+          <div class="qtr">Even if only <b>one in four</b> of those would have booked, that is <b id="oQ">$13,500</b> a month walking to another shop.</div>
+          <div class="qtr">And an oil change is never just an oil change. Whoever books one is whoever comes back for brakes, tires and everything after. Miss that call and you did not lose ninety dollars, you lost the customer and every job they had coming.</div>
         </div>
       </div>
     </div>
@@ -609,10 +610,10 @@
   function money(n){return "$"+Math.round(n).toLocaleString("en-CA");}
 
   var CALLS=[
-    {t:"8:12",  job:"Brakes, grinding at the front", v:680},
-    {t:"10:41", job:"Check engine light, diagnostic", v:180},
-    {t:"1:27",  job:"No start, needs a tow in",       v:950},
-    {t:"4:03",  job:"Four tires and an alignment",    v:1450}
+    {t:"7:48",  job:"Oil change, synthetic",          v:110},
+    {t:"10:41", job:"Winter tires on, four wheels",   v:95},
+    {t:"1:27",  job:"Brakes, pads and rotors, front", v:520},
+    {t:"4:03",  job:"Check engine light, diagnostic", v:150}
   ];
   var rowsEl=document.getElementById("rows"), totEl=document.getElementById("tot"),
       logEl=document.getElementById("log"), btnEl=document.getElementById("logBtn"),
