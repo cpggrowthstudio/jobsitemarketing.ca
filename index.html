@@ -181,11 +181,10 @@
   .flip .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(28px,4.5vw,60px);align-items:center}
   @media(max-width:940px){.flip .wrap{grid-template-columns:1fr}}
   .flip .sub{margin-top:16px;font-size:1.06rem;color:#39424A}
-  .slot{margin-top:22px;padding:15px 17px;background:#FCFAF5;border:1px dashed var(--rule);border-radius:5px;font-size:.92rem;color:var(--ink-soft)}
-  .slot audio{width:100%;margin-top:9px;display:none}
-  .slot.live{border-style:solid}
-  .slot.live audio{display:block}
-  .slot.live .ph{display:none}
+  /* hidden until AUDIO is set in the config block at the bottom */
+  .slot{display:none;margin-top:22px;padding:15px 17px;background:#FCFAF5;border:1px solid var(--rule);border-radius:5px;font-size:.92rem;color:var(--ink-soft)}
+  .slot.live{display:block}
+  .slot audio{width:100%;display:block}
   .talk{background:var(--asphalt-2);border:1px solid var(--rule-dark);border-radius:6px;box-shadow:0 22px 50px rgba(20,24,26,.2);overflow:hidden}
   .talk-h{display:flex;align-items:center;gap:10px;padding:13px 16px;background:var(--asphalt-3);color:var(--ink-inv);border-bottom:1px solid var(--rule-dark);font-weight:800;font-size:.95rem}
   .talk-h .dot{width:9px;height:9px;border-radius:50%;background:var(--booked);flex:0 0 9px}
@@ -455,7 +454,6 @@
       <h2>Hear it answer.</h2>
       <p class="sub">This is the 2:14 call from the log at the top. The leak. The one that goes to the next company on Google in about ninety seconds if nobody picks up.</p>
       <div class="slot" id="slot">
-        <div class="ph">A recording of a real call goes here. For now, watch the conversation.</div>
         <audio controls id="au" preload="none"></audio>
       </div>
     </div>
