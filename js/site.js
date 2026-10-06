@@ -1,7 +1,7 @@
 /* Shared across every page. Edit the three values, nothing else. */
 (function(){
   var PHONE   = "647 504 5210";
-  var EMAIL   = "hello@jobsitemarketing.ca";
+  var EMAIL   = "cpggrowthstudio@gmail.com";
   var KEYWORD = "CALLS";
 
   var d = PHONE.replace(/[^0-9+]/g,"");
