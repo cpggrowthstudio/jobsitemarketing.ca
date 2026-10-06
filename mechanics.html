@@ -420,13 +420,13 @@
           <input type="range" id="rM" min="1" max="25" value="5">
         </div>
         <div class="ctl">
-          <label for="rJ"><span>What an average repair order is worth</span><output id="oJ">$2,500</output></label>
+          <label for="rJ"><span>What an average repair order is worth</span><output id="oJ">$450</output></label>
           <input type="range" id="rJ" min="60" max="4000" step="20" value="450">
         </div>
         <div class="tally">
-          <div class="big" id="oBig">$54,000<small>a month</small></div>
+          <div class="big" id="oBig">$9,743<small>a month</small></div>
           <div class="cap">in work that rang, went to voicemail, and went to someone else.</div>
-          <div class="qtr">Even if only <b>one in four</b> of those would have booked, that is <b id="oQ">$13,500</b> a month walking to another shop.</div>
+          <div class="qtr">Even if only <b>one in four</b> of those would have booked, that is <b id="oQ">$2,436</b> a month walking to another shop.</div>
           <div class="qtr">And an oil change is never just an oil change. Whoever books one is whoever comes back for brakes, tires and everything after. Miss that call and you did not lose ninety dollars, you lost the customer and every job they had coming.</div>
         </div>
       </div>
@@ -679,17 +679,6 @@
     new IntersectionObserver(function(e,o){e.forEach(function(x){if(x.isIntersecting&&!played){played=true;playTalk();o.disconnect();}});},{threshold:.35})
       .observe(document.querySelector(".talk"));
   } else { playTalk(); }
-
-  var rt=document.getElementById("rtrack");
-  function step(dir){ var c=rt.querySelector(".rev"); if(!c) return;
-    rt.scrollBy({left:dir*(c.getBoundingClientRect().width+16),behavior:reduce?"auto":"smooth"}); }
-  function syncNav(){
-    var nav=document.querySelector(".revs-nav");
-    if(nav) nav.classList.toggle("off", rt.scrollWidth <= rt.clientWidth + 4);
-  }
-  syncNav(); addEventListener("resize", syncNav);
-  document.getElementById("rPrev").addEventListener("click",function(){step(-1);});
-  document.getElementById("rNext").addEventListener("click",function(){step(1);});
 
   var rM=document.getElementById("rM"),rJ=document.getElementById("rJ");
   function calc(){
