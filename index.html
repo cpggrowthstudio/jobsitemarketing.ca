@@ -80,37 +80,36 @@
   </div>
 </header>
 
-<section class="hero" id="top">
+<section class="hero split" id="top">
   <div class="glow"></div>
-  <svg class="shape" style="left:6%;top:26%;width:30px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#FFC93D"/></svg>
-  <svg class="shape" style="left:9%;bottom:18%;width:28px" viewBox="0 0 30 26"><path d="M15 0 30 26H0z" fill="#FFC93D" opacity=".8"/></svg>
-  <svg class="shape" style="right:7%;top:30%;width:34px;transform:rotate(16deg)" viewBox="0 0 40 14"><rect width="40" height="14" rx="7" fill="#F25C05"/></svg>
-  <svg class="shape" style="right:9%;bottom:20%;width:24px;transform:rotate(28deg)" viewBox="0 0 24 24"><rect width="24" height="24" rx="6" fill="#1F8A70"/></svg>
+  <svg class="shape" style="left:4%;top:24%;width:28px" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#FFC93D"/></svg>
   <div class="wrap">
     <div>
+      <div class="kick"><span class="sp"></span>Burlington and Halton</div>
       <h1>The call you miss is <em>a job you lose.</em></h1>
-      <p class="sub">We answer it, price it and book it. Before you are off the ladder.</p>
+      <p class="sub">Call or text, it answers, gives a price and books the job. Before you are off the ladder.</p>
+      <div class="acts">
+        <a class="btn p" href="#" data-sms><svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9 9 0 0 1-3.9-.9L3 20.5l1.6-4.7A8.4 8.4 0 0 1 3.6 11 8.4 8.4 0 0 1 12 2.6a8.4 8.4 0 0 1 9 8.9z"/></svg>Text to get started</a>
+        <a class="btn g" href="#price">See the price</a>
+      </div>
+      <p class="fine">From $99 a month. No contract. Thirty days money back.</p>
+    </div>
 
-    <div class="calc" id="cost">
-      <div class="calc-h"><b>What a missed call costs you</b><span>your numbers</span></div>
-      <div class="calc-b">
-        <div class="fld">
-          <div class="lab"><span>Calls you miss in a week</span><b id="oM">5</b></div>
-          <input type="range" id="rM" min="1" max="25" value="5" aria-label="Calls you miss in a week">
-        </div>
-        <div class="fld">
-          <div class="lab"><span>What a typical job is worth</span><b id="oJ">$2,500</b></div>
-          <input type="range" id="rJ" min="200" max="15000" step="100" value="2500" aria-label="What a typical job is worth">
-        </div>
-        <div class="out">
-          <div class="n" id="oT">$54,125<small>a month</small></div>
-          <div class="c">in work that rang, went to voicemail, and went to someone else.</div>
-          <div class="q">Even if only <b>one in four</b> would have booked, that is <b id="oQ">$13,531</b> a month walking to another company.</div>
+    <div>
+      <div class="phone">
+        <div class="phone-s">
+          <div class="ph-h">
+            <span class="av">?</span>
+            <span><b>New message</b><small>Unknown number &middot; 1:04 pm</small></span>
+          </div>
+          <div class="ph-feed" id="phFeed"></div>
+          <div class="ph-done" id="phDone">
+            <span class="tk">&#10003;</span>
+            <span><b>Booked, Thursday 9am</b><small>Confirmation texted. Added to the calendar.</small></span>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="acts">
-      <a class="btn p" href="#price"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>See the price</a>
+      <p class="ph-cap">What your number did while you were on a roof.</p>
     </div>
   </div>
 </section>
@@ -148,6 +147,33 @@
     <figure class="shot">
       <img src="img/p-roof.jpg" width="1400" height="1050" alt="A roofer working on a shingled roof at the end of the day, ladder against the eaves" loading="lazy">
     </figure>
+  </div>
+</section>
+
+<section class="pad" id="cost">
+  <div class="wrap" style="text-align:center">
+    <div class="eyebrow">What it costs</div>
+    <h2>Put your own numbers in.</h2>
+    <p class="lead" style="margin-left:auto;margin-right:auto">Two missed calls a week does not sound like much until you price it.</p>
+
+    <div class="calc">
+      <div class="calc-h"><b>What a missed call costs you</b><span>your numbers</span></div>
+      <div class="calc-b">
+        <div class="fld">
+          <div class="lab"><span>Calls you miss in a week</span><b id="oM">2</b></div>
+          <input type="range" id="rM" min="1" max="15" value="2" aria-label="Calls you miss in a week">
+        </div>
+        <div class="fld">
+          <div class="lab"><span>What a typical job is worth</span><b id="oJ">$1,200</b></div>
+          <input type="range" id="rJ" min="200" max="5000" step="100" value="1200" aria-label="What a typical job is worth">
+        </div>
+        <div class="out">
+          <div class="n" id="oT">$10,392<small>a month</small></div>
+          <div class="c">in work that rang, went to voicemail, and went to someone else.</div>
+          <div class="q">Even if only <b>one in four</b> would have booked, that is <b id="oQ">$2,598</b> a month walking to another company.</div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -306,6 +332,15 @@
     {t:"ai",  s:"Booked, Thursday 9am. Confirmation sent to this number.", d:1700},
     {t:"end", d:0}
   ];
+  var PH=[
+    {t:"them",s:"hi do you do deck repairs?"},
+    {t:"ai",  s:"We do. What is it doing?"},
+    {t:"them",s:"few boards are rotten, railing is loose"},
+    {t:"ai",  s:"Got it. What is the address?"},
+    {t:"them",s:"18 Maple Ave, Oakville"},
+    {t:"ai",  s:"Thanks. Repairs like that run a few hundred to about two thousand. Want someone out Thursday morning?"},
+    {t:"them",s:"thursday works"}
+  ];
   var MODE="call";
   var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
   var feed=document.getElementById("feed"), doneEl=document.getElementById("done"), ct=[];
@@ -333,6 +368,19 @@
       playTalk();
     });
   });
+  (function(){
+    var pf=document.getElementById("phFeed"), pd=document.getElementById("phDone");
+    PH.forEach(function(l){
+      var m=document.createElement("div"); m.className="m "+l.t; m.textContent=l.s; pf.appendChild(m);
+    });
+    var nodes=pf.querySelectorAll(".m");
+    if(reduce){ nodes.forEach(function(n){n.classList.add("in");}); pd.classList.add("in"); }
+    else {
+      nodes.forEach(function(n,i){ setTimeout(function(){ n.classList.add("in"); }, 220+i*150); });
+      setTimeout(function(){ pd.classList.add("in"); }, 220+nodes.length*150+260);
+    }
+  })();
+
   var played=false;
   if("IntersectionObserver" in window){
     new IntersectionObserver(function(e,o){e.forEach(function(x){if(x.isIntersecting&&!played){played=true;playTalk();o.disconnect();}});},{threshold:.35})
