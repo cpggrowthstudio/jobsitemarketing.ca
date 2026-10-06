@@ -227,6 +227,18 @@
   .note{margin-top:20px;font-size:.88rem;color:var(--soft);display:flex;gap:9px;align-items:flex-start;max-width:64ch}
   .note svg{width:17px;height:17px;flex:0 0 auto;margin-top:3px;fill:none;stroke:var(--soft);stroke-width:2.2}
 
+  /* who you are dealing with */
+  .me{background:var(--paper-2);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+  .me .wrap{display:grid;grid-template-columns:260px 1fr;gap:clamp(26px,4vw,48px);align-items:center}
+  @media(max-width:760px){.me .wrap{grid-template-columns:1fr;gap:24px}}
+  .me-pic{border:2px solid var(--ink);border-radius:18px;box-shadow:5px 6px 0 var(--ink);overflow:hidden;background:var(--cone);aspect-ratio:4/5;display:grid;place-items:center}
+  .me-pic img{width:100%;height:100%;object-fit:cover;display:block}
+  .me-pic .ini{font-family:var(--d);font-weight:800;font-size:4.4rem;color:#fff;letter-spacing:-.04em}
+  .me h2{margin-bottom:16px}
+  .me p{color:var(--ink-2);font-size:1.04rem;max-width:56ch}
+  .me p+p{margin-top:12px}
+  .me .sign{margin-top:20px;display:flex;gap:11px;flex-wrap:wrap}
+
   /* faq */
   details{background:var(--card);border:1.5px solid var(--line);border-radius:13px;padding:17px 21px;margin-top:10px}
   details[open]{border-color:var(--ink)}
