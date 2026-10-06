@@ -49,7 +49,7 @@
    "offers":{"@type":"Offer","price":"199","priceCurrency":"CAD","availability":"https://schema.org/InStock",
      "priceSpecification":{"@type":"UnitPriceSpecification","price":"199","priceCurrency":"CAD","unitText":"per month"}}},
   {"@type":"FAQPage","mainEntity":[
-    {"@type":"Question","name":"Does it just text people back?","acceptedAnswer":{"@type":"Answer","text":"No. It answers the call and talks to them. A text back tells someone you missed them. By then they have called the next company on Google."}},
+    {"@type":"Question","name":"What happens if someone texts instead of calling?","acceptedAnswer":{"@type":"Answer","text":"It texts back and holds a real conversation. Not an auto reply, an actual back and forth that gets the address, gives a rough price from the ranges the business sets, and books the job. Many customers would rather text than talk."}},
     {"@type":"Question","name":"Does the AI sound like a robot?","acceptedAnswer":{"@type":"Answer","text":"It talks like a person, pauses when the caller talks and handles interruptions. You choose the voice."}},
     {"@type":"Question","name":"Will it quote jobs over the phone?","acceptedAnswer":{"@type":"Answer","text":"It gives a rough range you set. It never gives a firm price on a job it has not seen. It books you to go and look."}},
     {"@type":"Question","name":"Do I need a new phone number?","acceptedAnswer":{"@type":"Answer","text":"No. We forward your existing number so nothing changes for your customers or your truck decals."}},
@@ -175,6 +175,13 @@
   .lines span:last-child{color:var(--red)}
   .argue p{margin-top:18px;color:var(--ink-2);font-size:1.04rem}
   .argue p+p{margin-top:12px}
+  .loop{background:var(--paper-2)}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.6vw,34px);margin-top:30px}
+  @media(max-width:860px){.steps{grid-template-columns:1fr;gap:24px}}
+  .st{position:relative;padding-top:52px}
+  .st .num{position:absolute;top:0;left:0;width:38px;height:38px;border-radius:999px;background:var(--ink);color:var(--yel);display:grid;place-items:center;font-family:var(--d);font-weight:800;font-size:1.05rem}
+  .st b{display:block;font-family:var(--d);font-weight:800;font-size:1.3rem;letter-spacing:-.02em;margin-bottom:7px}
+  .st p{color:var(--ink-2);font-size:1rem;line-height:1.55}
 
   .shot{border-radius:18px;overflow:hidden;border:2px solid var(--ink);box-shadow:5px 6px 0 var(--ink);margin:0}
   .shot img{width:100%;aspect-ratio:5/4;object-fit:cover;display:block}
@@ -189,6 +196,9 @@
   .talk-h{background:var(--ink);color:#fff;padding:12px 18px;display:flex;align-items:center;gap:9px;font-size:.85rem;font-weight:600}
   .talk-h .dot{width:8px;height:8px;border-radius:50%;background:#35C07A;box-shadow:0 0 0 4px rgba(53,192,122,.22)}
   .talk-h em{font-style:normal;margin-left:auto;color:#9AA5A0;font-size:.78rem}
+  .tabs{display:flex;gap:6px;padding:12px 16px 0}
+  .tab{flex:1;border:1.5px solid var(--line);background:var(--paper);border-radius:10px;padding:9px;font:inherit;font-size:.86rem;font-weight:700;color:var(--soft);cursor:pointer;font-family:var(--d)}
+  .tab.on{background:var(--ink);border-color:var(--ink);color:#fff}
   .feed{padding:16px 16px 6px;display:flex;flex-direction:column;gap:9px;min-height:300px}
   .feed .m{max-width:84%;padding:10px 14px;border-radius:14px;font-size:.93rem;line-height:1.45;opacity:0;transform:translateY(8px);transition:.4s}
   .feed .m.in{opacity:1;transform:none}
@@ -342,7 +352,7 @@
   <div class="wrap">
     <div class="rz">
       <img src="img/t-answer.jpg" alt="A tradesman listening on the phone in his workshop" loading="lazy">
-      <div class="tx"><b>It answers.</b><p>Not a text saying sorry we missed you. By then they are already talking to someone else.</p></div>
+      <div class="tx"><b>Call or text, it answers.</b><p>Most people would rather text than talk. Either way it has a real back and forth and books the job.</p></div>
     </div>
     <div class="rz">
       <img src="img/t-local.jpg" alt="A work pickup parked on a Burlington street on an autumn morning" loading="lazy">
@@ -365,6 +375,8 @@
       </div>
       <p>Someone with water coming through the ceiling is not waiting for you to climb down. They are already calling the next company on Google.</p>
       <p><b>That is a job gone, and you never knew it was there.</b></p>
+      <p>Same if they text. An auto reply saying sorry we missed you is not a conversation. Something has to actually talk to them and book it.</p>
+      <p>And before any of that, they have to find you. If you are not in the first few on Google with reviews worth reading, there is no call to miss in the first place.</p>
     </div>
     <figure class="shot">
       <img src="img/p-roof.jpg" width="1400" height="1050" alt="A roofer working on a shingled roof at the end of the day, ladder against the eaves" loading="lazy">
@@ -376,10 +388,11 @@
   <div class="glow2"></div>
   <div class="wrap">
     <div class="eyebrow" style="color:var(--yel)">What happens instead</div>
-    <h2>This is the 2:14 call.</h2>
-    <p class="lead">The leak from the log at the top. The one that goes to the next company on Google in about ninety seconds if nobody picks up.</p>
+    <h2>Call or text, it books the job.</h2>
+    <p class="lead">Same system either way. Have a look at both.</p>
     <div class="talk">
-      <div class="talk-h"><span class="dot"></span><span>Northshore Roofing</span><em>2:14 pm</em></div>
+      <div class="talk-h"><span class="dot"></span><span id="talkWho">Northshore Roofing</span><em id="talkWhen">2:14 pm</em></div>
+      <div class="tabs"><button class="tab on" data-mode="call" type="button">They called</button><button class="tab" data-mode="text" type="button">They texted</button></div>
       <div class="feed" id="feed"></div>
       <div class="done" id="done"><span class="tk">&#10003;</span><div><b>Estimate booked</b><small>Tomorrow, 8:00 am. Confirmation texted.</small></div></div>
       <button class="replay" id="talkBtn" type="button">Play it again</button>
@@ -388,6 +401,18 @@
 </section>
 
 
+
+<section class="pad loop">
+  <div class="wrap">
+    <div class="eyebrow">How it works</div>
+    <h2>Found, answered and booked.</h2>
+    <div class="steps">
+      <div class="st"><span class="num">1</span><b>Get found.</b><p>A website built to rank, your Google Business Profile sorted, your reviews out front.</p></div>
+      <div class="st"><span class="num">2</span><b>Get called.</b><p>It picks up in two rings, day or night, and sounds like a person.</p></div>
+      <div class="st"><span class="num">3</span><b>Get booked.</b><p>Address taken, price given, job on your calendar before you are off the ladder.</p></div>
+    </div>
+  </div>
+</section>
 
 <section class="pad price" id="price">
   <div class="glow"></div>
@@ -408,7 +433,7 @@
           <li>Calls and texts answered, unlimited</li>
           <li>Rough prices from the ranges you set</li>
           <li>Jobs booked straight onto your calendar</li>
-          <li>Missed call text back as a backstop</li>
+          <li>Texts answered with a real conversation, not an auto reply</li>
           <li>The app on your phone, every lead in one place</li>
           <li>Set up and managed for you</li>
         </ul>
@@ -426,8 +451,9 @@
         </div>
         <ul>
           <li><b>Everything in Starter</b></li>
-          <li>A website built for Google and AI search</li>
-          <li>Your real Google reviews on it</li>
+          <li>A website built to rank on Google and in AI answers</li>
+            <li>Your Google Business Profile claimed and filled out properly</li>
+          <li>Your real Google reviews on the site</li>
           <li>Review requests sent after every job</li>
           <li>One update a month, whatever you need changed</li>
           <li>Live in about two weeks</li>
@@ -448,7 +474,7 @@
     <div class="eyebrow">Questions</div>
     <h2>Before you start.</h2>
     <div style="margin-top:28px">
-      <details open><summary>Is this just missed call text back?</summary><p>No. You get that too, as a backstop, but it is not the point. A text back only tells someone you missed them, and by then they have called the next company on Google. Ours answers the call and talks to them. That is the difference.</p></details>
+      <details open><summary>What happens if they text instead of call?</summary><p>It texts back and has a proper conversation. Not an auto reply saying sorry we missed you, an actual back and forth that gets the address, gives your price range and books the job. Plenty of people would rather text than talk, and that is most of the point.</p></details>
       <details><summary>Will it quote jobs over the phone?</summary><p>It gives a rough range you set, like "repairs usually run a few hundred to fifteen hundred." It never gives a firm price on a job it has not seen, because that is how you end up eating a bad number. It books you to go and look.</p></details>
       <details><summary>Do I need a new phone number?</summary><p>No. We forward your existing number, so nothing changes for your customers or your truck decals.</p></details>
     </div>
@@ -518,6 +544,19 @@
     {t:"them",s:"Great, thank you.", d:1050},
     {t:"end", d:0}
   ];
+  var TEXTS=[
+    {t:"sys", s:"1:04 pm. A text comes in while you are on a job.", d:1300},
+    {t:"them",s:"hi do you do deck repairs?", d:1400},
+    {t:"ai",  s:"We do. What is it doing?", d:1300},
+    {t:"them",s:"few boards are rotten and the railing is loose", d:1600},
+    {t:"ai",  s:"Got it. What is the address?", d:1300},
+    {t:"them",s:"18 Maple Ave, Oakville", d:1300},
+    {t:"ai",  s:"Thanks. Repairs like that usually run a few hundred to around two thousand, depending what is underneath. Want someone out Thursday morning to look?", d:2100},
+    {t:"them",s:"thursday works", d:1200},
+    {t:"ai",  s:"Booked, Thursday 9am. Confirmation sent to this number.", d:1700},
+    {t:"end", d:0}
+  ];
+  var MODE="call";
   var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
   var feed=document.getElementById("feed"), doneEl=document.getElementById("done"), ct=[];
   function playTalk(){
@@ -529,11 +568,21 @@
       feed.appendChild(m);
       requestAnimationFrame(function(){requestAnimationFrame(function(){m.classList.add("in");feed.scrollTop=feed.scrollHeight;});});
     }
-    if(reduce){ LINES.forEach(add); return; }
+    var SRC = MODE==="call" ? LINES : TEXTS;
+    if(reduce){ SRC.forEach(add); return; }
     var at=400;
-    LINES.forEach(function(l){ ct.push(setTimeout(function(){add(l);}, at)); at+=l.d; });
+    SRC.forEach(function(l){ ct.push(setTimeout(function(){add(l);}, at)); at+=l.d; });
   }
   document.getElementById("talkBtn").addEventListener("click", playTalk);
+  document.querySelectorAll(".tab").forEach(function(b){
+    b.addEventListener("click", function(){
+      MODE = b.getAttribute("data-mode");
+      document.querySelectorAll(".tab").forEach(function(x){ x.classList.toggle("on", x===b); });
+      document.getElementById("talkWho").textContent = MODE==="call" ? "Northshore Roofing" : "New text, unknown number";
+      document.getElementById("talkWhen").textContent = MODE==="call" ? "2:14 pm" : "1:04 pm";
+      playTalk();
+    });
+  });
   var played=false;
   if("IntersectionObserver" in window){
     new IntersectionObserver(function(e,o){e.forEach(function(x){if(x.isIntersecting&&!played){played=true;playTalk();o.disconnect();}});},{threshold:.35})
