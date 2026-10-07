@@ -583,6 +583,10 @@
     <div><b>Serving</b>Burlington, Oakville, Milton, Halton Hills, Hamilton, Stoney Creek, Ancaster, Waterdown</div>
     <div><b>More</b><a href="/">For trades and construction</a><br><a href="/websites.html">Websites and AI search</a></div>
   </div>
+  <div class="wrap" style="border-top:1px solid var(--line-d,#3A423D);margin-top:28px;padding-top:18px;font-size:.84rem">
+    &copy; <span id="yr2"></span> Jobsite Marketing &middot; Burlington, Ontario, Canada<br>
+    Jobsite Marketing is a trading name of Jeka Products Inc.
+  </div>
 </footer>
 
 <div class="bar"><a class="t" href="#" data-sms>Text us</a><a class="c" href="#" data-tel>Call</a></div>
@@ -602,6 +606,7 @@
   document.querySelectorAll("[data-sms]").forEach(function(a){a.href=sms;});
   document.querySelectorAll("[data-tel-text]").forEach(function(a){a.textContent=PHONE;});
   document.querySelectorAll("[data-mail]").forEach(function(a){a.href="mailto:"+EMAIL;});
+  var y2=document.getElementById("yr2"); if(y2) y2.textContent=new Date().getFullYear();
   document.querySelectorAll("[data-mail-text]").forEach(function(a){a.textContent=EMAIL;});
   document.querySelectorAll("[data-kw]").forEach(function(a){a.textContent=KEYWORD;});
   if(AUDIO){document.getElementById("au").src=AUDIO;document.getElementById("slot").classList.add("live");}
