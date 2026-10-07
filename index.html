@@ -27,37 +27,168 @@
 
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@graph":[
-  {
-    "@type":"ProfessionalService","@id":"https://jobsitemarketing.ca/#business",
-    "name":"Jobsite Marketing","url":"https://jobsitemarketing.ca/",
-    "description":"Automated call answering, rough estimates and job scheduling for trades and construction businesses in Halton Region and Hamilton, Ontario. Website included.",
-    "telephone":"+1-647-504-5210","email":"cpggrowthstudio@gmail.com",
-    "image":"https://jobsitemarketing.ca/og-image.png",
-    "address":{"@type":"PostalAddress","addressLocality":"Burlington","addressRegion":"ON","addressCountry":"CA"},
-    "geo":{"@type":"GeoCoordinates","latitude":43.3255,"longitude":-79.7990},
-    "areaServed":[{"@type":"City","name":"Burlington"},{"@type":"City","name":"Oakville"},{"@type":"City","name":"Milton"},{"@type":"City","name":"Halton Hills"},{"@type":"City","name":"Hamilton"},{"@type":"City","name":"Stoney Creek"},{"@type":"City","name":"Ancaster"},{"@type":"City","name":"Waterdown"}],
-    "priceRange":"$$"
-  },
-  {"@type":"Service","@id":"https://jobsitemarketing.ca/#service",
-   "name":"Automated call answering, rough estimates and job scheduling for trades",
-   "serviceType":"Automated call answering, rough estimating and job scheduling",
-   "provider":{"@id":"https://jobsitemarketing.ca/#business"},
-   "areaServed":"Halton Region and Hamilton, Ontario",
-   "audience":{"@type":"Audience","audienceType":"Roofers, plumbers, HVAC, electricians, landscapers, deck and fence builders, concrete contractors, general contractors, tree services, painters"},
-   "description":"Answers the calls and texts a trade misses while on a job, collects the address and job details, gives a rough price from ranges the business sets, books the job on the calendar and texts a confirmation. It never gives a firm price on a job it has not seen.",
-   "offers":{"@type":"Offer","price":"199","priceCurrency":"CAD","availability":"https://schema.org/InStock",
-     "priceSpecification":{"@type":"UnitPriceSpecification","price":"199","priceCurrency":"CAD","unitText":"per month"}}},
-  {"@type":"FAQPage","mainEntity":[
-    {"@type":"Question","name":"What happens if someone texts instead of calling?","acceptedAnswer":{"@type":"Answer","text":"It texts back and holds a real conversation. Not an auto reply, an actual back and forth that gets the address, gives a rough price from the ranges the business sets, and books the job. Many customers would rather text than talk."}},
-    {"@type":"Question","name":"Does the AI sound like a robot?","acceptedAnswer":{"@type":"Answer","text":"It talks like a person, pauses when the caller talks and handles interruptions. You choose the voice."}},
-    {"@type":"Question","name":"Will it quote jobs over the phone?","acceptedAnswer":{"@type":"Answer","text":"It gives a rough range you set. It never gives a firm price on a job it has not seen. It books you to go and look."}},
-    {"@type":"Question","name":"Do I need a new phone number?","acceptedAnswer":{"@type":"Answer","text":"No. We forward your existing number so nothing changes for your customers or your truck decals."}},
-    {"@type":"Question","name":"What if I want to answer my own phone?","acceptedAnswer":{"@type":"Answer","text":"You do. It only picks up when you do not, after however many rings you choose. You can set it to after hours only."}},
-    {"@type":"Question","name":"How long does setup take?","acceptedAnswer":{"@type":"Answer","text":"About two weeks. You fill in one form about your services, your hours and a rough price range for each. We build it, test it and switch it on."}},
-    {"@type":"Question","name":"Am I locked in?","acceptedAnswer":{"@type":"Answer","text":"No. Month to month, 30 days notice, and 30 day money back if it is not for you."}}
-  ]}
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://jobsitemarketing.ca/#business",
+      "name": "Jobsite Marketing",
+      "url": "https://jobsitemarketing.ca/",
+      "description": "Automated call answering, rough estimates and job scheduling for trades and construction businesses in Halton Region and Hamilton, Ontario. Website included.",
+      "telephone": "+1-647-504-5210",
+      "email": "cpggrowthstudio@gmail.com",
+      "image": "https://jobsitemarketing.ca/og-image.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Burlington",
+        "addressRegion": "ON",
+        "addressCountry": "CA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 43.3255,
+        "longitude": -79.799
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Burlington"
+        },
+        {
+          "@type": "City",
+          "name": "Oakville"
+        },
+        {
+          "@type": "City",
+          "name": "Milton"
+        },
+        {
+          "@type": "City",
+          "name": "Halton Hills"
+        },
+        {
+          "@type": "City",
+          "name": "Hamilton"
+        },
+        {
+          "@type": "City",
+          "name": "Stoney Creek"
+        },
+        {
+          "@type": "City",
+          "name": "Ancaster"
+        },
+        {
+          "@type": "City",
+          "name": "Waterdown"
+        }
+      ],
+      "priceRange": "$$"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://jobsitemarketing.ca/#service",
+      "name": "Automated call answering, rough estimates and job scheduling for trades",
+      "serviceType": "Automated call answering, rough estimating and job scheduling",
+      "provider": {
+        "@id": "https://jobsitemarketing.ca/#business"
+      },
+      "areaServed": "Halton Region and Hamilton, Ontario",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Roofers, plumbers, HVAC, electricians, landscapers, deck and fence builders, concrete contractors, general contractors, tree services, painters"
+      },
+      "description": "Answers the calls and texts a trade misses while on a job, collects the address and job details, gives a rough price from ranges the business sets, books the job on the calendar and texts a confirmation. It never gives a firm price on a job it has not seen.",
+      "offers": {
+        "@type": "Offer",
+        "price": "199",
+        "priceCurrency": "CAD",
+        "availability": "https://schema.org/InStock",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "199",
+          "priceCurrency": "CAD",
+          "unitText": "per month"
+        }
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is the AI actually any good?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A year ago, honestly, no. It was stilted, it talked over people and they hung up. That changed fast. Today it pauses when the caller talks, handles being interrupted and picks the thread back up, and most people do not clock it. And whatever you make of it, it beats nobody picking up at all."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if they text instead of call?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It texts back and has a proper conversation. Not an auto reply saying sorry we missed you, an actual back and forth that gets the address, gives your price range and books the job. Plenty of people would rather text than talk, and that is most of the point."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will it quote jobs over the phone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It gives a rough range you set, like “repairs usually run a few hundred to fifteen hundred.” It never gives a firm price on a job it has not seen, because that is how you end up eating a bad number. It books you to go and look."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if it does not know the answer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It says so, takes the details and tells them you will come back to them. Then it texts you the whole conversation. It does not guess and it does not invent a price."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I want to answer my own phone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You do. It only picks up when you do not, after however many rings you choose. Or set it to evenings and weekends only, which is when nearly half the calls come in anyway."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a new phone number?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. We forward your existing number, so nothing changes for your customers or your truck decals."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long until it is running?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "About 2 weeks. You fill in one form about your services, your hours and a rough price range for each. I build it, test it and switch it on."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I hear what it said?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Every call is recorded and every conversation is texted to you as a transcript, so you can see exactly what was said and what got booked."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Am I locked in?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Month to month, cancel anytime with 30 days notice, and a 30 day money back guarantee if it is not for you."
+          }
+        }
+      ]
+    }
   ]
 }
 </script>
@@ -88,29 +219,39 @@
     <div>
       <div class="kick"><span class="sp"></span>Burlington and Halton</div>
       <h1>The call you miss is <em>a job you lose.</em></h1>
-      <p class="sub">Call or text, it answers, gives a price and books the job. Before you are off the ladder.</p>
+      <p class="sub">Call or text, it answers, gives a price and books the job. Before you have put your tools down.</p>
       <div class="acts">
         <a class="btn p" href="#" data-sms><svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9 9 0 0 1-3.9-.9L3 20.5l1.6-4.7A8.4 8.4 0 0 1 3.6 11 8.4 8.4 0 0 1 12 2.6a8.4 8.4 0 0 1 9 8.9z"/></svg>Text to get started</a>
         <a class="btn g" href="#price">See the price</a>
       </div>
-      <p class="fine">You fill in one form. I do the rest.<br>From $99 a month. No contract. Thirty days money back.</p>
+      <div class="stat"><b>62%</b><span>of people who reach your voicemail call a competitor instead. They do not call you back.</span></div>
+      <p class="fine">You fill in one form. I do the rest.<br>From $99 a month. No contract. 30 day money back guarantee.</p>
     </div>
 
     <div>
+      <div class="pick-l">Pick your trade</div>
+      <div class="picks idle" id="picks">
+        <button class="tp on" data-t="plumber" type="button">Plumber</button>
+        <button class="tp" data-t="roofer" type="button">Roofer</button>
+        <button class="tp" data-t="electrician" type="button">Electrician</button>
+        <button class="tp" data-t="hvac" type="button">HVAC</button>
+        <button class="tp" data-t="mechanic" type="button">Mechanic</button>
+        <button class="tp" data-t="contractor" type="button">Contractor</button>
+      </div>
       <div class="phone">
         <div class="phone-s">
           <div class="ph-h">
             <span class="av">?</span>
-            <span><b>New message</b><small>Unknown number &middot; 1:04 pm</small></span>
+            <span><b>New message</b><small id="phWhen">Unknown number &middot; 1:04 pm</small></span>
           </div>
           <div class="ph-feed" id="phFeed"></div>
           <div class="ph-done" id="phDone">
             <span class="tk">&#10003;</span>
-            <span><b>Booked, Thursday 9am</b><small>Confirmation texted. Added to the calendar.</small></span>
+            <span><b id="phBook">Booked, Thursday 9am</b><small>Confirmation texted. Added to the calendar.</small></span>
           </div>
         </div>
       </div>
-      <p class="ph-cap">What your number did while you were on a roof.</p>
+      <p class="ph-cap">What your number did while you were on a job.</p>
     </div>
   </div>
 </section>
@@ -123,11 +264,11 @@
     </div>
     <div class="rz">
       <img src="img/t-local.jpg?v=2" alt="A contractor pickup truck parked on a Burlington street on a bright summer morning" loading="lazy">
-      <div class="tx"><b>We are down the road.</b><ul><li>Burlington based, not a call centre</li><li>Hear something you do not like, text me and it changes that day</li><li>One person builds it, same person fixes it</li></ul></div>
+      <div class="tx"><b>We are down the road.</b><ul><li>Burlington based, not a call centre</li><li>Hear something you do not like, text me and it changes that day</li><li>A dedicated person on your account, not a ticket queue</li></ul></div>
     </div>
     <div class="rz">
       <img src="img/t-safe.jpg?v=2" alt="A contractor shaking hands with a homeowner beside an open work van" loading="lazy">
-      <div class="tx"><b>Thirty days, money back.</b><ul><li>No contract and no setup fee</li><li>Cancel any time on 30 days notice</li><li>Not catching you work, you get it back</li></ul></div>
+      <div class="tx"><b>30 day money back guarantee.</b><ul><li>No contract and no setup fee</li><li>Cancel anytime with 30 days notice</li><li>Not catching you work, you get it back</li></ul></div>
     </div>
   </div>
 </section>
@@ -153,7 +294,7 @@
   <div class="wrap" style="text-align:center">
     <div class="eyebrow">What it costs</div>
     <h2>Put your own numbers in.</h2>
-    <p class="lead" style="margin-left:auto;margin-right:auto">Two missed calls a week does not sound like much until you price it. The figure below assumes only one in four would have booked. Across home services, 62 per cent of people who reach voicemail call a competitor instead.</p>
+    <p class="lead" style="margin-left:auto;margin-right:auto">Two missed calls a week does not sound like much until you price it. The figure below assumes only one in four would have booked. Across home services, 62% of people who reach voicemail call a competitor instead.</p>
 
     <div class="calc">
       <div class="calc-h"><b>What a missed call costs you</b><span>your numbers</span></div>
@@ -198,31 +339,70 @@
   <div class="wrap">
     <div class="eyebrow">How it works</div>
     <h2>Found, answered and booked.</h2>
-    <p class="lead">Three things have to happen before a job is yours. Answering the phone is only one of them.</p>
-    <div class="steps">
-      <div class="st"><span class="num">1</span><b>Get found.</b>
-        <ul>
-          <li><a class="lnk" href="websites.html">A website built to rank</a> on Google and in AI answers</li>
-          <li>Your Google Business Profile claimed, filled out and kept current, which is what puts you in the map</li>
-          <li>Your real Google reviews on the page, shown as people wrote them</li>
-          <li>A review request texted after every job, so the pile keeps growing</li>
-        </ul>
+    <p class="lead">Three things have to happen before a job is yours.</p>
+
+    <div class="flow">
+      <div class="fc">
+        <div class="fc-v">
+          <div class="mk">
+            <div class="mk-bar"><svg viewBox="0 0 24 24" style="width:11px;height:11px;fill:none;stroke:#8F9A94;stroke-width:2.6"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>roofer near me</div>
+            <div class="mk-r top"><b>Your business</b><em>&#9733;&#9733;&#9733;&#9733;&#9733; 4.9</em></div>
+            <div class="mk-r"><div class="mk-g"></div><div class="mk-g"></div></div>
+            <div class="mk-r"><div class="mk-g"></div><div class="mk-g"></div></div>
+          </div>
+        </div>
+        <div class="fc-b">
+          <div class="fc-n"><i>1</i>Get found</div>
+          <ul>
+            <li><a class="lnk" href="websites.html">A website that ranks</a></li>
+            <li>Google profile sorted</li>
+            <li>Your reviews up front</li>
+            <li>A review asked for after every job</li>
+          </ul>
+        </div>
       </div>
-      <div class="st"><span class="num">2</span><b>Get called.</b>
-        <ul>
-          <li>Answers in two rings, day or night, weekends included</li>
-          <li>Sounds like a person and handles being interrupted</li>
-          <li>Trained on your services, your hours and your price ranges</li>
-          <li>Texts and calls both land in one place on your phone</li>
-        </ul>
+
+      <div class="fc">
+        <div class="fc-v">
+          <div class="mk">
+            <div class="mk-m b">furnace is blowing cold</div>
+            <div class="mk-m a">Is it running at all?</div>
+            <div class="mk-m b">runs but cold</div>
+            <div class="mk-m a">Usually two to five hundred. Tomorrow 8am?</div>
+          </div>
+        </div>
+        <div class="fc-b">
+          <div class="fc-n"><i>2</i>Get answered</div>
+          <ul>
+            <li>2 rings, day or night</li>
+            <li>Call or text, same system</li>
+            <li>Sounds like a person</li>
+            <li>Knows your prices</li>
+          </ul>
+        </div>
       </div>
-      <div class="st"><span class="num">3</span><b>Get booked.</b>
-        <ul>
-          <li>Takes the address and what is actually wrong</li>
-          <li>Gives a rough price from the ranges you set, never a firm one on a job it has not seen</li>
-          <li>Puts it straight on your calendar</li>
-          <li>Texts them the confirmation and you the transcript</li>
-        </ul>
+
+      <div class="fc">
+        <div class="fc-v">
+          <div class="mk">
+            <div class="mk-cal">
+              <div class="hd">Thursday</div>
+              <div class="mk-row"><em>8:00</em><span></span></div>
+              <div class="mk-row on"><em>9:00</em><span>15 Cedar Ave</span></div>
+              <div class="mk-row"><em>10:00</em><span></span></div>
+              <div class="mk-row"><em>11:00</em><span></span></div>
+            </div>
+          </div>
+        </div>
+        <div class="fc-b">
+          <div class="fc-n"><i>3</i>Get booked</div>
+          <ul>
+            <li>Address taken</li>
+            <li>Price given, never a firm one</li>
+            <li>Straight on your calendar</li>
+            <li>They get a confirmation, you get the transcript</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -278,7 +458,7 @@
       </div>
 
     </div>
-    <div class="gtee" style="text-align:center;margin-top:22px;color:#B9C2BD;font-size:.93rem"><b style="color:#fff">30 day money back on both.</b> No contract, 30 days notice, any time.</div>
+    <div class="gtee" style="text-align:center;margin-top:22px;color:#B9C2BD;font-size:.93rem"><b style="color:#fff">30 day money back guarantee on both.</b> No contract. Cancel anytime with 30 days notice.</div>
   </div>
 </section>
 
@@ -287,11 +467,33 @@
   <div class="wrap" style="max-width:min(800px,90vw)">
     <div class="eyebrow">Questions</div>
     <h2>Before you start.</h2>
-    <div style="margin-top:28px">
-      <details open><summary>What happens if they text instead of call?</summary><p>It texts back and has a proper conversation. Not an auto reply saying sorry we missed you, an actual back and forth that gets the address, gives your price range and books the job. Plenty of people would rather text than talk, and that is most of the point.</p></details>
-      <details><summary>Will it quote jobs over the phone?</summary><p>It gives a rough range you set, like "repairs usually run a few hundred to fifteen hundred." It never gives a firm price on a job it has not seen, because that is how you end up eating a bad number. It books you to go and look.</p></details>
-      <details><summary>Do I need a new phone number?</summary><p>No. We forward your existing number, so nothing changes for your customers or your truck decals.</p></details>
-    </div>
+
+    <details><summary>Is the AI actually any good?</summary>
+      <p>A year ago, honestly, no. It was stilted, it talked over people and they hung up. That changed fast. Today it pauses when the caller talks, handles being interrupted and picks the thread back up, and most people do not clock it. And whatever you make of it, it beats nobody picking up at all.</p></details>
+
+    <details><summary>What happens if they text instead of call?</summary>
+      <p>It texts back and has a proper conversation. Not an auto reply saying sorry we missed you, an actual back and forth that gets the address, gives your price range and books the job. Plenty of people would rather text than talk, and that is most of the point.</p></details>
+
+    <details><summary>Will it quote jobs over the phone?</summary>
+      <p>It gives a rough range you set, like “repairs usually run a few hundred to fifteen hundred.” It never gives a firm price on a job it has not seen, because that is how you end up eating a bad number. It books you to go and look.</p></details>
+
+    <details><summary>What happens if it does not know the answer?</summary>
+      <p>It says so, takes the details and tells them you will come back to them. Then it texts you the whole conversation. It does not guess and it does not invent a price.</p></details>
+
+    <details><summary>What if I want to answer my own phone?</summary>
+      <p>You do. It only picks up when you do not, after however many rings you choose. Or set it to evenings and weekends only, which is when nearly half the calls come in anyway.</p></details>
+
+    <details><summary>Do I need a new phone number?</summary>
+      <p>No. We forward your existing number, so nothing changes for your customers or your truck decals.</p></details>
+
+    <details><summary>How long until it is running?</summary>
+      <p>About 2 weeks. You fill in one form about your services, your hours and a rough price range for each. I build it, test it and switch it on.</p></details>
+
+    <details><summary>Can I hear what it said?</summary>
+      <p>Yes. Every call is recorded and every conversation is texted to you as a transcript, so you can see exactly what was said and what got booked.</p></details>
+
+    <details><summary>Am I locked in?</summary>
+      <p>No. Month to month, cancel anytime with 30 days notice, and a 30 day money back guarantee if it is not for you.</p></details>
   </div>
 </section>
 
@@ -301,7 +503,7 @@
     <div>
       <div class="eyebrow">Who you are dealing with</div>
       <h2>Hi, I am Ahmed.</h2>
-      <p>I live in Burlington and I run this on my own. I set it up, I am the one who answers when you text, and I am the one who changes it when something does not sound right. No account manager, no call centre, no ticket number.</p>
+      <p>I am based in Burlington and I look after the accounts here myself. You get one dedicated person who knows your setup and answers when you text, not a call centre, not a ticket number, not a different name every time.</p>
       <p>I started it because small trades lose work they never find out about, while the bigger outfits have somebody sitting on the phone all day. That never seemed fair, and it turns out it is fixable.</p>
       <p>If you want to ask me something before you spend anything, just text. I would rather talk to you than sell to you.</p>
       <div class="sign">
@@ -315,7 +517,7 @@
 <section class="pad final">
   <div class="wrap">
     <h2>Stop losing jobs to voicemail.</h2>
-    <p>Text us and we will set it up. From $99 a month, thirty days money back.</p>
+    <p>Text us and we will set it up. From $99 a month, 30 day money back guarantee.</p>
     <div class="acts">
       <a class="btn w" href="#" data-sms><svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9 9 0 0 1-3.9-.9L3 20.5l1.6-4.7A8.4 8.4 0 0 1 3.6 11 8.4 8.4 0 0 1 12 2.6a8.4 8.4 0 0 1 9 8.9z"/></svg>Text <span data-tel-text>647 504 5210</span></a>
       <a class="btn w" href="#" data-tel>Call us</a>
@@ -370,16 +572,56 @@
     {t:"ai",  s:"Booked, Thursday 9am. Confirmation sent to this number.", d:1700},
     {t:"end", d:0}
   ];
-  var PH=[
-    {t:"them",s:"hi do you do deck repairs?"},
-    {t:"ai",  s:"We do. What is it doing?"},
-    {t:"them",s:"few boards are rotten, railing is loose"},
-    {t:"ai",  s:"Got it. What is the address?"},
-    {t:"them",s:"18 Maple Ave, Oakville"},
-    {t:"ai",  s:"Thanks. A couple of boards and a railing usually starts around four hundred."},
-    {t:"ai",  s:"It only climbs toward two thousand if the frame underneath has gone as well. Want someone out Thursday morning to look?"},
-    {t:"them",s:"thursday works"}
-  ];
+  var TRADES = {
+    plumber:{ when:"Unknown number \u00b7 1:04 pm", book:"Booked, Thursday 9am", msgs:[
+      {t:"them",s:"hi my kitchen tap is leaking under the sink"},
+      {t:"ai",  s:"Is water getting out now, or is it a drip?"},
+      {t:"them",s:"drip but the cupboard is soaked"},
+      {t:"ai",  s:"Got it. What is the address?"},
+      {t:"them",s:"22 Elgin St, Burlington"},
+      {t:"ai",  s:"Thanks. A tap and shutoff is usually two to four hundred. Thursday morning work?"},
+      {t:"them",s:"yes please"}]},
+    roofer:{ when:"Unknown number \u00b7 2:14 pm", book:"Booked, Thursday 8am", msgs:[
+      {t:"them",s:"do you do roof leaks?"},
+      {t:"ai",  s:"We do. Is it coming through the ceiling now?"},
+      {t:"them",s:"theres a stain spreading in the spare room"},
+      {t:"ai",  s:"Okay. What is the address?"},
+      {t:"them",s:"42 Lakeshore Rd, Burlington"},
+      {t:"ai",  s:"Thanks. Repairs like that start around four hundred, and only get near two thousand if the decking has gone. Thursday 8am to look?"},
+      {t:"them",s:"thursday works"}]},
+    electrician:{ when:"Unknown number \u00b7 11:20 am", book:"Booked, Friday 10am", msgs:[
+      {t:"them",s:"need a quote for an ev charger in the garage"},
+      {t:"ai",  s:"Happy to. Roughly how old is the house, and what panel have you got?"},
+      {t:"them",s:"1998, 200 amp i think"},
+      {t:"ai",  s:"That usually keeps it simple. What is the address?"},
+      {t:"them",s:"7 Deerhurst Cres, Oakville"},
+      {t:"ai",  s:"Thanks. A level 2 charger on a 200 amp panel is usually twelve hundred to two thousand fitted. Friday to confirm?"},
+      {t:"them",s:"friday is good"}]},
+    hvac:{ when:"Unknown number \u00b7 6:48 pm", book:"Booked, tomorrow 8am", msgs:[
+      {t:"them",s:"furnace is blowing cold air"},
+      {t:"ai",  s:"Worth looking at quickly. Is it running at all, or nothing?"},
+      {t:"them",s:"it runs but just cold"},
+      {t:"ai",  s:"Okay. What is the address?"},
+      {t:"them",s:"15 Cedar Ave, Hamilton"},
+      {t:"ai",  s:"Thanks. Most no heat calls are the igniter or flame sensor, usually two to five hundred. Tomorrow 8am?"},
+      {t:"them",s:"yes asap"}]},
+    mechanic:{ when:"Unknown number \u00b7 3:32 pm", book:"Booked, tomorrow 8am", msgs:[
+      {t:"them",s:"my brakes are grinding, can you look at it"},
+      {t:"ai",  s:"Grinding usually means the pads are gone. What is the car?"},
+      {t:"them",s:"2017 civic"},
+      {t:"ai",  s:"Front pads and rotors on a Civic are usually four to six hundred, depending on the calipers."},
+      {t:"them",s:"can you fit me in"},
+      {t:"ai",  s:"We can take it tomorrow at 8. Want me to hold it?"},
+      {t:"them",s:"yes please"}]},
+    contractor:{ when:"Unknown number \u00b7 9:05 am", book:"Booked, Thursday 1pm", msgs:[
+      {t:"them",s:"looking for a quote on a basement reno"},
+      {t:"ai",  s:"Happy to. Roughly what size, and is a bathroom going in?"},
+      {t:"them",s:"about 700 sq ft, yes a 3 piece"},
+      {t:"ai",  s:"Got it. What is the address?"},
+      {t:"them",s:"18 Maple Ave, Oakville"},
+      {t:"ai",  s:"Thanks. Basements that size usually land between forty and seventy thousand depending on finishes. Thursday to measure up?"},
+      {t:"them",s:"thursday works"}]}
+  };
   var MODE="call";
   var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
   var feed=document.getElementById("feed"), doneEl=document.getElementById("done"), ct=[];
@@ -407,18 +649,31 @@
       playTalk();
     });
   });
-  (function(){
-    var pf=document.getElementById("phFeed"), pd=document.getElementById("phDone");
-    PH.forEach(function(l){
+  var phT=[];
+  function showTrade(key){
+    phT.forEach(clearTimeout); phT=[];
+    var d=TRADES[key], pf=document.getElementById("phFeed"), pd=document.getElementById("phDone");
+    document.getElementById("phWhen").textContent=d.when;
+    document.getElementById("phBook").textContent=d.book;
+    pf.innerHTML=""; pd.classList.remove("in");
+    d.msgs.forEach(function(l){
       var m=document.createElement("div"); m.className="m "+l.t; m.textContent=l.s; pf.appendChild(m);
     });
     var nodes=pf.querySelectorAll(".m");
-    if(reduce){ nodes.forEach(function(n){n.classList.add("in");}); pd.classList.add("in"); }
-    else {
-      nodes.forEach(function(n,i){ setTimeout(function(){ n.classList.add("in"); }, 220+i*150); });
-      setTimeout(function(){ pd.classList.add("in"); }, 220+nodes.length*150+260);
-    }
-  })();
+    if(reduce){ nodes.forEach(function(n){n.classList.add("in");}); pd.classList.add("in"); return; }
+    nodes.forEach(function(n,i){ phT.push(setTimeout(function(){ n.classList.add("in"); }, 160+i*140)); });
+    phT.push(setTimeout(function(){ pd.classList.add("in"); }, 160+nodes.length*140+240));
+  }
+  showTrade("plumber");
+  var picks=document.getElementById("picks");
+  picks.querySelectorAll(".tp").forEach(function(b){
+    b.addEventListener("click", function(){
+      picks.classList.remove("idle");
+      picks.querySelectorAll(".tp").forEach(function(x){ x.classList.toggle("on", x===b); });
+      showTrade(b.getAttribute("data-t"));
+    });
+  });
+
 
   var played=false;
   if("IntersectionObserver" in window){
